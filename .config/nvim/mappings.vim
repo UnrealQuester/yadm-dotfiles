@@ -38,18 +38,30 @@ tnoremap <C-J> <C-\><C-N><C-W><C-J>
 tnoremap <C-K> <C-\><C-N><C-W><C-K>
 tnoremap <C-L> <C-\><C-N><C-W><C-L>
 tnoremap <C-H> <C-\><C-N><C-W><C-H>
-nnoremap <silent> <C-Space>c :$tabnew<CR>:terminal<CR>
+nnoremap <silent> <C-Space>c :$tabnew +:terminal<CR>
+tnoremap <silent> <C-Space>c <C-\><C-n>:$tabnew +:terminal<CR>
 nnoremap <silent> <C-Space>s :belowright :split +:terminal<CR>
+tnoremap <silent> <C-Space>s <C-\><C-n>:belowright :split +:terminal<CR>
 nnoremap <silent> <C-Space>v :belowright :vsplit +:terminal<CR>
+tnoremap <silent> <C-Space>v <C-\><C-n>:belowright :vsplit +:terminal<CR>
 nnoremap <silent> <C-Space>1 :1tabnext<CR>
+tnoremap <silent> <C-Space>1 <C-\><C-n>:1tabnext<CR>
 nnoremap <silent> <C-Space>2 :2tabnext<CR>
+tnoremap <silent> <C-Space>2 <C-\><C-n>:2tabnext<CR>
 nnoremap <silent> <C-Space>3 :3tabnext<CR>
+tnoremap <silent> <C-Space>3 <C-\><C-n>:3tabnext<CR>
 nnoremap <silent> <C-Space>4 :4tabnext<CR>
+tnoremap <silent> <C-Space>4 <C-\><C-n>:4tabnext<CR>
 nnoremap <silent> <C-Space>5 :5tabnext<CR>
+tnoremap <silent> <C-Space>5 <C-\><C-n>:5tabnext<CR>
 nnoremap <silent> <C-Space>6 :6tabnext<CR>
+tnoremap <silent> <C-Space>6 :<C-\><C-n>6tabnext<CR>
 nnoremap <silent> <C-Space>7 :7tabnext<CR>
+tnoremap <silent> <C-Space>7 <C-\><C-n>:7tabnext<CR>
 nnoremap <silent> <C-Space>8 :8tabnext<CR>
+tnoremap <silent> <C-Space>8 <C-\><C-n>:8tabnext<CR>
 nnoremap <silent> <C-Space>9 :9tabnext<CR>
+tnoremap <silent> <C-Space>9 <C-\><C-n>:9tabnext<CR>
 
 map /  <Plug>(incsearch-forward)
 map ?  <Plug>(incsearch-backward)
