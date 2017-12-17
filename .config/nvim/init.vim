@@ -148,7 +148,7 @@ if has("autocmd")
 
         autocmd Filetype ruby,puppet,yaml,cabal setlocal ts=2 sts=2 sw=2
         autocmd Syntax php set syntax=on
-        autocmd TermOpen * set bufhidden=delete | startinsert
+        autocmd TermOpen * set bufhidden=delete | startinsert | setlocal nonumber norelativenumber
         autocmd VimEnter * if !empty($NVIM_LISTEN_ADDRESS) && $NVIM_LISTEN_ADDRESS !=# v:servername
                     \ |let g:r=jobstart(['nc', '-U', $NVIM_LISTEN_ADDRESS],{'rpc':v:true})
                     \ |let g:f=fnameescape(expand('%:p'))
