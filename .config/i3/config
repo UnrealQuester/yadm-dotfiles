@@ -194,6 +194,7 @@ for_window [class="keepassxc"] floating enable
 for_window [class="Steam"] floating enable;
 for_window [class="systemsettings"] floating enable;
 for_window [class="discover"] floating enable;
+for_window [class="Skype"] floating enable;
 
 assign [class="Google-chrome"] $ws4
 assign [class="Thunderbird"] $ws5
