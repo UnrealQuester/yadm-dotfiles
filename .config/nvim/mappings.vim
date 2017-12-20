@@ -114,34 +114,18 @@ let g:AutoPairsShortcutBackInsert = '<C-b>'
 let g:targets_separators = '. ; : + - = ~ _ * # / | \ & $'
 
 " unite
-nnoremap <silent> <Leader>ag :Unite -buffer-name=search grep:.<CR>
-nnoremap <silent> <Leader>aw :Unite -buffer-name=search grep:.:-w:<C-R><C-W><CR>
-nnoremap <silent> <Leader>ar :UniteResume search<CR>
-nnoremap <silent> <Leader>f :Unite -buffer-name=files file_rec/async<CR>
-nnoremap <silent> <Leader>b :Unite -buffer-name=buffer buffer<CR>
-
-nnoremap <silent> <Leader>gs :Unite giti/status -no-start-insert<CR>
-
-autocmd FileType unite call s:unite_settings()
+nnoremap <silent> <Leader>ag :Denite -buffer-name=search grep:.<CR>
+nnoremap <silent> <Leader>aw :Denite -buffer-name=search grep:.:-w:<C-R><C-W><CR>
+nnoremap <silent> <Leader>ar :Denite -buffer-name=search grep -resume<CR>
+nnoremap <silent> <Leader>f :Denite file_rec<CR>
+nnoremap <silent> <Leader>b :Denite buffer<CR>
+nnoremap <silent> <Leader>gs :Denite gitstatus<CR>
+call denite#custom#map('normal', 'ga', '<denite:do_action:add>', 'noremap')
+call denite#custom#map('normal', 'gp', '<denite:do_action:patch>', 'noremap')
+call denite#custom#map('normal', 'gr', '<denite:do_action:reset>', 'noremap')
 
 autocmd FileType c noremap <buffer> <C-]> :YcmCompleter GoTo<CR>
 autocmd FileType cpp noremap <buffer> <C-]> :YcmCompleter GoTo<CR>
-
-function! s:unite_settings()
-  " Enable navigation with Tab and Shift-Tab in insert mode
-  imap <buffer> <Tab>   <Plug>(unite_select_next_line)
-  imap <buffer> <S-tab> <Plug>(unite_select_previous_line)
-  for source in unite#get_current_unite().sources
-      if source.name == 'giti/status'
-          nnoremap <silent><buffer><expr>ga unite#do_action('stage')
-          nnoremap <silent><buffer><expr>gp unite#do_action('add_patch')
-          nnoremap <silent><buffer><expr>gc unite#do_action('checkout')
-          nnoremap <silent><buffer><expr>gd unite#do_action('diff')
-          nnoremap <silent><buffer><expr>gu unite#do_action('unstage')
-          nnoremap <silent><buffer><expr>gr unite#do_action('reset')
-      endif
-  endfor
-endfunction
 
 nnoremap <silent> <Leader>gd :Gdiff<CR>
 nnoremap <silent> <Leader>gc :Gcommit -v<CR>

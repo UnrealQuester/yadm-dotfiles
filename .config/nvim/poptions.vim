@@ -20,29 +20,22 @@ let g:targets_aiAI = 'a  i'
 
 let g:tcommentMapLeaderOp1 = '<Leader>c'
 
-" Unite
-call unite#filters#matcher_default#use(['matcher_fuzzy'])
-call unite#filters#sorter_default#use(['sorter_selecta'])
-call unite#custom#profile('default', 'context', {'start_insert':1})
-call unite#custom#profile('files', 'context', {'smartcase':1})
-call unite#custom#profile('search', 'context', {
-            \    'start_insert':0,
-            \})
-if executable('ag')
-    let g:unite_source_grep_command='ag'
-    let g:unite_source_grep_default_opts='--hidden --nocolor --line-numbers --nogroup -S'
-    let g:unite_source_grep_recursive_opt=''
-    let g:unite_source_rec_async_command= ['ag', '--follow', '--nocolor', '--nogroup', '--hidden', '-g', '']
-    call unite#custom#source('grep', 'max_candidates', 1000)
-endif
-let g:unite_source_tag_max_fname_length = 70
-let g:unite_source_tag_max_name_length = 70
-
 " YouCompleteMe
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_key_list_previous_completion = ['<S-Tab>']
 let g:ycm_confirm_extra_conf = 0
 let g:ycm_max_diagnostics_to_display = 400
+
+" Denite
+call denite#custom#var('file_rec', 'command', ['ag', '--follow', '--nocolor', '--nogroup', '--hidden', '-g', ''])
+call denite#custom#var('grep', 'command', ['ag'])
+call denite#custom#var('grep', 'default_opts', ['-i', '--vimgrep'])
+call denite#custom#var('grep', 'recursive_opts', [])
+call denite#custom#var('grep', 'pattern_opt', [])
+call denite#custom#var('grep', 'separator', ['--'])
+call denite#custom#var('grep', 'final_opts', [])
+call denite#custom#option('_', 'mode', 'normal')
+call denite#custom#option('_', 'direction', 'dynamictop')
 
 " Ultisnips
 let g:UltiSnipsExpandTrigger = "<c-j>"
