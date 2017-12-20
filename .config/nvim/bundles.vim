@@ -3,7 +3,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'airblade/vim-gitgutter'
 Plug 'altercation/vim-colors-solarized'
 Plug 'chase/vim-ansible-yaml'
-Plug 'Cofyc/vim-uncrustify'
 Plug 'ConradIrwin/vim-bracketed-paste'
 Plug 'elzr/vim-json'
 Plug 'haya14busa/incsearch.vim'
