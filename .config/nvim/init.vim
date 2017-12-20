@@ -1,9 +1,9 @@
 set nocompatible
 filetype off
-" new keybindings
-source $HOME/.config/nvim/mappings.vim
 " plugins
 source $HOME/.config/nvim/bundles.vim
+" new keybindings
+source $HOME/.config/nvim/mappings.vim
 " The usual filetype plugins
 filetype indent plugin on
 " Syntax highlighting
