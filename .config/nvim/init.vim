@@ -137,6 +137,18 @@ let $VISUAL = '$(which nvr) -cc split -c "set bufhidden=delete" -c "lcd $PWD" --
 " quoted
 command Bufhiddendelete set bufhidden=delete
 
+function! SetBufferOpts()
+    if &buftype == 'terminal'
+        setlocal nonumber
+        setlocal norelativenumber
+        setlocal scrolloff=0
+    else
+        set number
+        set relativenumber
+        set scrolloff=5
+    endif
+endfunction
+
 " autocommands
 if has("autocmd")
     augroup vimrc
@@ -148,7 +160,8 @@ if has("autocmd")
 
         autocmd Filetype ruby,puppet,yaml,cabal setlocal ts=2 sts=2 sw=2
         autocmd Syntax php set syntax=on
-        autocmd TermOpen * set bufhidden=delete | startinsert | setlocal nonumber norelativenumber
+        autocmd TermOpen * set bufhidden=delete | startinsert
+        autocmd TermOpen,BufWinEnter * call SetBufferOpts()
         autocmd VimEnter * if !empty($NVIM_LISTEN_ADDRESS) && $NVIM_LISTEN_ADDRESS !=# v:servername
                     \ |let g:r=jobstart(['nc', '-U', $NVIM_LISTEN_ADDRESS],{'rpc':v:true})
                     \ |let g:f=fnameescape(expand('%:p'))
@@ -160,6 +173,7 @@ if has("autocmd")
                     \ |else
                     \ |    call rpcrequest(g:r, "nvim_command", "edit ".g:f)
                     \ |endif
+                    \ |call rpcrequest(g:r, "nvim_command", "call SetBufferOpts()")
                     \ |qa
                     \ |endif
         autocmd BufWinEnter,WinEnter term://* startinsert
