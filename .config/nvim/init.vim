@@ -114,6 +114,9 @@ set vb t_vb=
 " diffopt ignore whitespace
 set diffopt+=iwhite
 
+" smart joining of comment lines
+set formatoptions+=j
+
 " fix zooming in konsole
 set guicursor=
 
