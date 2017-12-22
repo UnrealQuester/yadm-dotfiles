@@ -117,7 +117,7 @@ let g:targets_separators = '. ; : + - = ~ _ * # / | \ & $'
 nnoremap <silent> <Leader>ag :Denite -buffer-name=search grep:.<CR>
 nnoremap <silent> <Leader>aw :Denite -buffer-name=search grep:.:-w:<C-R><C-W><CR>
 nnoremap <silent> <Leader>ar :Denite -buffer-name=search grep -resume<CR>
-nnoremap <silent> <Leader>f :Denite file_rec<CR>
+nnoremap <silent> <Leader>f :Denite file_rec -mode=insert<CR>
 nnoremap <silent> <Leader>b :Denite buffer<CR>
 nnoremap <silent> <Leader>gs :Denite gitstatus<CR>
 call denite#custom#map('normal', 'ga', '<denite:do_action:add>', 'noremap')
