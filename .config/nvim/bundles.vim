@@ -11,6 +11,7 @@ Plug 'haya14busa/incsearch.vim'
 Plug 'honza/vim-snippets'
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'  }
+Plug 'junegunn/fzf.vim'
 Plug 'kana/vim-altr'
 Plug 'kana/vim-textobj-entire'
 Plug 'kana/vim-textobj-indent'

@@ -117,12 +117,15 @@ let g:targets_separators = '. ; : + - = ~ _ * # / | \ & $'
 nnoremap <silent> <Leader>ag :Denite -buffer-name=search grep:.<CR>
 nnoremap <silent> <Leader>aw :Denite -buffer-name=search grep:.:-w:<C-R><C-W><CR>
 nnoremap <silent> <Leader>ar :Denite -buffer-name=search grep -resume<CR>
-nnoremap <silent> <Leader>f :Denite file_rec -mode=insert<CR>
+nnoremap <silent> <Leader>f :Files<CR>
 nnoremap <silent> <Leader>b :Denite buffer<CR>
 nnoremap <silent> <Leader>gs :Denite gitstatus<CR>
 call denite#custom#map('normal', 'ga', '<denite:do_action:add>', 'noremap')
 call denite#custom#map('normal', 'gp', '<denite:do_action:patch>', 'noremap')
 call denite#custom#map('normal', 'gr', '<denite:do_action:reset>', 'noremap')
+
+" Use Ag to search inf files and ingore the file name as a search result
+command! -bang -nargs=* Ag call fzf#vim#ag(<q-args>, {'options': '--delimiter : --nth 4..'}, <bang>0)
 
 autocmd FileType c noremap <buffer> <C-]> :YcmCompleter GoTo<CR>
 autocmd FileType cpp noremap <buffer> <C-]> :YcmCompleter GoTo<CR>

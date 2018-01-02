@@ -35,7 +35,7 @@ call denite#custom#var('grep', 'pattern_opt', [])
 call denite#custom#var('grep', 'separator', ['--'])
 call denite#custom#var('grep', 'final_opts', [])
 call denite#custom#option('_', 'mode', 'normal')
-call denite#custom#option('_', 'direction', 'dynamictop')
+call denite#custom#option('_', 'direction', 'dynamicbottom')
 
 " Ultisnips
 let g:UltiSnipsExpandTrigger = "<c-j>"

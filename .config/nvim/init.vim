@@ -180,6 +180,7 @@ if has("autocmd")
                     \ |qa
                     \ |endif
         autocmd BufWinEnter,WinEnter term://* startinsert
+        autocmd Filetype fzf tnoremap <silent> <buffer> <esc> <C-\><C-n>:q<CR>
     augroup END
 endif
 
