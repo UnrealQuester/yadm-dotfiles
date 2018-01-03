@@ -24,6 +24,8 @@ set winminheight=0
 set wildmenu
 set wildmode=longest,full
 set completeopt=longest,menuone,preview
+set shortmess+=c
+
 " Indentation settings
 set tabstop=4
 set shiftwidth=4
@@ -38,6 +40,9 @@ set backspace=indent,eol,start whichwrap+=<,>,[,]
 
 " Only search the first and last line for mode
 set modelines=1
+
+" Remove mode indicator
+set noshowmode
 
 " List mode
 set list
@@ -181,6 +186,7 @@ if has("autocmd")
                     \ |endif
         autocmd BufWinEnter,WinEnter term://* startinsert
         autocmd Filetype fzf tnoremap <silent> <buffer> <esc> <C-\><C-n>:q<CR>
+        autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
     augroup END
 endif
 

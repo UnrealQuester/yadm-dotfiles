@@ -37,6 +37,17 @@ call denite#custom#var('grep', 'final_opts', [])
 call denite#custom#option('_', 'mode', 'normal')
 call denite#custom#option('_', 'direction', 'dynamicbottom')
 
+" deoplete
+let g:deoplete#enable_at_startup = 1
+let g:deoplete#auto_complete_delay = 200
+let g:deoplete#auto_refresh_delay = 200
+call deoplete#custom#set('ultisnips', 'rank', 9999)
+call deoplete#custom#set('ultisnips', 'matchers', ['matcher_fuzzy'])
+let g:deoplete#sources#clang#libclang_path = '/usr/lib/llvm-6.0/lib/libclang.so.1'
+let g:deoplete#sources#clang#clang_header = '/usr/include/clang/6.0/include'
+call deoplete#custom#source('clang', 'converters', ['converter_auto_paren', 'converter_remove_overlap'])
+let g:echodoc#enable_at_startup = 1
+
 " Ultisnips
 let g:UltiSnipsExpandTrigger = "<c-j>"
 let g:UltiSnipsJumpForwardTrigger = "<c-j>"

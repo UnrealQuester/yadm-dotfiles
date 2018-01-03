@@ -127,6 +127,11 @@ call denite#custom#map('normal', 'gr', '<denite:do_action:reset>', 'noremap')
 " Use Ag to search inf files and ingore the file name as a search result
 command! -bang -nargs=* Ag call fzf#vim#ag(<q-args>, {'options': '--delimiter : --nth 4..'}, <bang>0)
 
+" deoplete
+inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+inoremap <expr><s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"
+inoremap <expr><BS>  deoplete#smart_close_popup()."\<C-h>"
+
 autocmd FileType c noremap <buffer> <C-]> :YcmCompleter GoTo<CR>
 autocmd FileType cpp noremap <buffer> <C-]> :YcmCompleter GoTo<CR>
 
