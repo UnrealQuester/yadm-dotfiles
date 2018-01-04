@@ -48,6 +48,10 @@ let g:deoplete#sources#clang#clang_header = '/usr/include/clang/6.0/include'
 call deoplete#custom#source('clang', 'converters', ['converter_auto_paren', 'converter_remove_overlap'])
 let g:echodoc#enable_at_startup = 1
 
+let g:deoplete#sources#ternjs#types = 1
+let g:deoplete#sources#ternjs#docs = 1
+
+
 " Ultisnips
 let g:UltiSnipsExpandTrigger = "<c-j>"
 let g:UltiSnipsJumpForwardTrigger = "<c-j>"
