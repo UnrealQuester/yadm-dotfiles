@@ -40,6 +40,6 @@ Plug 'w0rp/ale'
 Plug 'xolox/vim-shell'
 Plug 'xolox/vim-misc'
 Plug 'Yggdroot/indentLine'
-Plug 'zchee/deoplete-clang'
 Plug 'carlitux/deoplete-ternjs'
+Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh' }
 call plug#end()

@@ -132,8 +132,8 @@ inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 inoremap <expr><s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"
 inoremap <expr><BS>  deoplete#smart_close_popup()."\<C-h>"
 
-autocmd FileType c noremap <buffer> <C-]> :YcmCompleter GoTo<CR>
-autocmd FileType cpp noremap <buffer> <C-]> :YcmCompleter GoTo<CR>
+autocmd FileType c noremap <buffer> <C-]> :call LanguageClient_textDocument_definition()<CR>
+autocmd FileType cpp noremap <buffer> <C-]> :call LanguageClient_textDocument_definition()<CR>
 
 nnoremap <silent> <Leader>gd :Gdiff<CR>
 nnoremap <silent> <Leader>gc :Gcommit -v<CR>
