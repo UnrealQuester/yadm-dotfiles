@@ -21,7 +21,7 @@ Plug 'leafgarland/typescript-vim'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'PeterRincker/vim-argumentative'
 Plug 'Shougo/denite.nvim'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins', 'tag': '4.0-serial' }
 Plug 'Shougo/echodoc.vim'
 Plug 'Shougo/neopairs.vim'
 Plug 'Shougo/vimproc', { 'do': 'make' }
@@ -42,4 +42,5 @@ Plug 'xolox/vim-misc'
 Plug 'Yggdroot/indentLine'
 Plug 'carlitux/deoplete-ternjs'
 Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh' }
+Plug 'mhartington/nvim-typescript'
 call plug#end()
