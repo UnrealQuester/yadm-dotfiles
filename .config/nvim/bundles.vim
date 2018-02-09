@@ -20,6 +20,7 @@ Plug 'kana/vim-textobj-user'
 Plug 'leafgarland/typescript-vim'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'PeterRincker/vim-argumentative'
+Plug 'Quramy/vim-js-pretty-template'
 Plug 'Shougo/denite.nvim'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins', 'tag': '4.0-serial' }
 Plug 'Shougo/echodoc.vim'
