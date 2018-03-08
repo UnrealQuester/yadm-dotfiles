@@ -1,0 +1,7 @@
+[user]
+	email = a.buddenbrock@ish.de
+	name = Alexander Freiherr von Buddenbrock
+[merge]
+	tool = nvr
+[mergetool "nvr"]
+    cmd = "nvr -cc tabnew \"$MERGED\" -o \"$LOCAL\" -O \"$BASE\" \"$REMOTE\" --remote-wait"

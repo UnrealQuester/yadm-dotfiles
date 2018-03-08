@@ -170,20 +170,6 @@ if has("autocmd")
         autocmd Syntax php set syntax=on
         autocmd TermOpen * set bufhidden=delete | startinsert
         autocmd TermOpen,BufWinEnter * call SetBufferOpts()
-        autocmd VimEnter * if !empty($NVIM_LISTEN_ADDRESS) && $NVIM_LISTEN_ADDRESS !=# v:servername
-                    \ |let g:r=jobstart(['nc', '-U', $NVIM_LISTEN_ADDRESS],{'rpc':v:true})
-                    \ |let g:f=fnameescape(expand('%:p'))
-                    \ |let g:p=getcwd()
-                    \ |noau bwipe
-                    \ |call rpcrequest(g:r, "nvim_command", "lcd ".g:p)
-                    \ |if g:f == ""
-                    \ |    call rpcrequest(g:r, "nvim_command", "enew")
-                    \ |else
-                    \ |    call rpcrequest(g:r, "nvim_command", "edit ".g:f)
-                    \ |endif
-                    \ |call rpcrequest(g:r, "nvim_command", "call SetBufferOpts()")
-                    \ |qa
-                    \ |endif
         autocmd BufWinEnter,WinEnter term://* startinsert
         autocmd Filetype fzf tnoremap <silent> <buffer> <esc> <C-\><C-n>:q<CR>
         autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif

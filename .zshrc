@@ -91,6 +91,7 @@ function latexmkspeciale() {
     latexmk -c
 }
 
+alias vim="nvr -s -cc split"
 alias ls="ls --color=auto"
 alias :q="exit"
 alias :e="vim"
@@ -107,5 +108,5 @@ _fzf_compgen_path() {
 }
 
 if [ -z ${NVIM_LISTEN_ADDRESS+x} ]; then
-    vim +:term
+    nvr -s -c 'term'
 fi
