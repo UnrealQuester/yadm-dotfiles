@@ -50,6 +50,8 @@ let g:echodoc#enable_at_startup = 1
 let g:deoplete#sources#ternjs#types = 1
 let g:deoplete#sources#ternjs#docs = 1
 
+let g:nvim_typescript#max_completion_detail = 100
+
 let g:LanguageClient_serverCommands = { 'cpp': ['clangd'] }
 let g:LanguageClient_diagnosticsEnable = 0
 
