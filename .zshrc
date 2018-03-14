@@ -110,3 +110,8 @@ _fzf_compgen_path() {
 if [ -z ${NVIM_LISTEN_ADDRESS+x} ]; then
     nvr -s -c 'term'
 fi
+
+neovim_autocd() {
+    [[ $NVIM_LISTEN_ADDRESS ]] && nvr -c "lcd $PWD"
+}
+chpwd_functions+=(neovim_autocd)
