@@ -109,6 +109,9 @@ _fzf_compgen_path() {
 
 if [ -z ${NVIM_LISTEN_ADDRESS+x} ]; then
     nvr -s -c 'term'
+else
+    alias :q="nvr -c q"
+    alias :qa="nvr -c qa"
 fi
 
 neovim_autocd() {
