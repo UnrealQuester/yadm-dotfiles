@@ -199,6 +199,7 @@ for_window [class="systemsettings"] floating enable;
 for_window [class="discover"] floating enable;
 for_window [class="Skype"] floating enable;
 for_window [class="VirtualBox"] floating enable;
+for_window [class="Wine"] floating enable;
 
 assign [class="Google-chrome"] $ws4
 assign [class="Thunderbird"] $ws5
