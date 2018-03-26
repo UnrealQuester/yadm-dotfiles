@@ -24,6 +24,9 @@ set $darkwhite   #a89984
 set $background  #000000
 set $transparent #00000000
 
+# Do not warp mouse to a different output when a new window is created there
+mouse_warping none
+
 # Windows button
 set $mod Mod4
 
