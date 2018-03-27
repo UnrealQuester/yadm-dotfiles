@@ -18,7 +18,7 @@ let g:vim_json_syntax_conceal = 0
 let g:targets_nlNL = '    '
 let g:targets_aiAI = 'a  i'
 
-let g:tcommentMapLeaderOp1 = '<Leader>c'
+let g:tcomment_opleader1 = '<Leader>c'
 
 " YouCompleteMe
 let g:ycm_autoclose_preview_window_after_completion = 1
@@ -65,7 +65,7 @@ let g:UltiSnipsJumpBackwardTrigger = "<c-k>"
 let g:incsearch#auto_nohlsearch = 1
 
 " tcomment
-call tcomment#DefineType('cabal', '-- %s')
+call tcomment#type#Define('cabal', '-- %s')
 
 " airline
 function! GetBufferTermName()
