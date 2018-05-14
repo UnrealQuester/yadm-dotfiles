@@ -41,8 +41,8 @@ call denite#custom#option('_', 'direction', 'dynamicbottom')
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#auto_complete_delay = 200
 let g:deoplete#auto_refresh_delay = 200
-call deoplete#custom#set('ultisnips', 'rank', 9999)
-call deoplete#custom#set('ultisnips', 'matchers', ['matcher_fuzzy'])
+call deoplete#custom#source('ultisnips', 'rank', 9999)
+call deoplete#custom#source('ultisnips', 'matchers', ['matcher_fuzzy'])
 call deoplete#custom#source('typescript', 'converters', ['converter_auto_paren', 'converter_remove_overlap'])
 call deoplete#custom#source('LanguageClient', 'converters', ['converter_auto_paren', 'converter_remove_overlap'])
 let g:echodoc#enable_at_startup = 1
