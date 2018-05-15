@@ -114,6 +114,7 @@ let g:easytags_languages = {
 " ale
 let g:ale_linters = {
 \   'cpp': ['clangtidy', 'clang'],
+\   'asm': [],
 \}
 
 let g:ale_fixers = {
