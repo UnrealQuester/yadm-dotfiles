@@ -54,6 +54,7 @@ let g:nvim_typescript#max_completion_detail = 100
 
 let g:LanguageClient_serverCommands = { 'cpp': ['clangd'] }
 let g:LanguageClient_diagnosticsEnable = 0
+let g:LanguageClient_hasSnippetSupport = 0
 
 
 " Ultisnips
