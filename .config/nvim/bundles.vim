@@ -43,5 +43,5 @@ Plug 'xolox/vim-misc'
 Plug 'Yggdroot/indentLine'
 Plug 'carlitux/deoplete-ternjs'
 Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh' }
-Plug 'mhartington/nvim-typescript', { 'do': ':UpdateRemotePlugins' }
+Plug 'mhartington/nvim-typescript', { 'do': './install.sh' }
 call plug#end()
