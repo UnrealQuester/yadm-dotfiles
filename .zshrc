@@ -107,7 +107,11 @@ export FZF_COMPLETION_TRIGGER=''
 bindkey '^T' fzf-completion
 bindkey '^I' $fzf_default_completion
 _fzf_compgen_path() {
-    ag -g "" "$1"
+    fd . "$1"
+}
+
+_fzf_compgen_dir() {
+    fd --type d . "$1"
 }
 
 if [ -z ${NVIM_LISTEN_ADDRESS+x} ]; then
