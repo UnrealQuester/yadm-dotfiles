@@ -87,7 +87,7 @@ bindkey '^[[Z' reverse-menu-complete
 bindkey '\e[3~' delete-char
 
 function latexmkspeciale() {
-    latexmk -pdf -pvc "$1"
+    latexmk -shell-escape -pdf -pvc "$1"
     latexmk -c
 }
 
