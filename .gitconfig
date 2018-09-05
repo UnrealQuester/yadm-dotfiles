@@ -5,3 +5,5 @@
 	tool = nvr
 [mergetool "nvr"]
     cmd = "nvr -cc tabnew \"$MERGED\" -o \"$LOCAL\" -O \"$BASE\" \"$REMOTE\" --remote-wait"
+[push]
+	default = simple
