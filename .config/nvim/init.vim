@@ -170,7 +170,7 @@ if has("autocmd")
         autocmd Syntax php set syntax=on
         autocmd TermOpen * set bufhidden=delete | startinsert
         autocmd TermOpen,BufWinEnter * call SetBufferOpts()
-        autocmd BufWinEnter,WinEnter term://* startinsert
+        autocmd BufWinEnter,WinEnter term://* resize -1 | resize +1 | startinsert
         autocmd Filetype fzf tnoremap <silent> <buffer> <esc> <C-\><C-n>:q<CR>
         autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
     augroup END
