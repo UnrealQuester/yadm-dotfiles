@@ -22,7 +22,7 @@ setopt AUTO_CD
 setopt HIST_IGNORE_ALL_DUPS
 setopt SHARE_HISTORY
 
-source ~/antigen/antigen.zsh
+source ~/antigen.zsh
 antigen use oh-my-zsh
 export NVM_LAZY_LOAD=true
 antigen bundle lukechilds/zsh-nvm
