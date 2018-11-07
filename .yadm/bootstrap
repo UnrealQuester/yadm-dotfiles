@@ -12,6 +12,7 @@ sudo update-alternatives --install /usr/bin/editor editor /usr/bin/nvim 60
 curl -L git.io/antigen > antigen.zsh
 chsh -s /bin/zsh
 curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+curl -fLo ~/.local/share/konsole/Gruvbox_dark.colorscheme --create-dirs https://raw.githubusercontent.com/morhetz/gruvbox-contrib/master/konsole/Gruvbox_dark.colorscheme
 mkdir -p ~/.vim/backup
 mkdir -p ~/.vim/undo
 nvim "+PlugInstall --sync"

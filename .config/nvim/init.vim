@@ -95,8 +95,9 @@ set virtualedit=all
 set showtabline=2
 
 " Colorscheme
+set termguicolors
 set background=dark
-colorscheme solarized
+colorscheme gruvbox
 hi Variable ctermfg=13
 hi Member ctermfg=45
 hi Namespace ctermfg=9
