@@ -95,6 +95,7 @@ set virtualedit=all
 set showtabline=2
 
 " Colorscheme
+let g:gruvbox_italic=1
 set termguicolors
 set background=dark
 colorscheme gruvbox
