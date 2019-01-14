@@ -99,6 +99,7 @@ alias emerge="sudo emerge -at"
 alias eselect="sudo eselect"
 alias ...="cd ../.."
 alias vimsplit="vim -O"
+alias upssh="vagrant up && vagrant ssh"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='ag -g ""'
