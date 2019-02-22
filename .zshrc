@@ -22,6 +22,7 @@ setopt AUTO_CD
 setopt HIST_IGNORE_ALL_DUPS
 setopt SHARE_HISTORY
 
+ANTIGEN_CACHE=false
 source ~/antigen.zsh
 antigen use oh-my-zsh
 export NVM_LAZY_LOAD=true
@@ -126,3 +127,6 @@ neovim_autocd() {
     [[ $NVIM_LISTEN_ADDRESS ]] && nvr -c "lcd $PWD"
 }
 chpwd_functions+=(neovim_autocd)
+if [ $commands[kubectl] ]; then
+  source <(kubectl completion zsh) || true
+fi
