@@ -142,6 +142,7 @@ if executable('ag')
 endif
 
 let $VISUAL = '$(which nvr) -cc split -c "set bufhidden=delete" -c "lcd $PWD" --remote-wait'
+let $EDITOR = '$(which nvr) -cc split -c "set bufhidden=delete" -c "lcd $PWD" --remote-wait'
 " can be used with nvr in the sudoers file
 " for some reason using a command with spaces there does not work, even when
 " quoted
