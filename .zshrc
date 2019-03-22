@@ -130,3 +130,5 @@ chpwd_functions+=(neovim_autocd)
 if [ $commands[kubectl] ]; then
   source <(kubectl completion zsh) || true
 fi
+# configure hal auto-complete
+[ -f /etc/bash_completion.d/hal ] && . /etc/bash_completion.d/hal
