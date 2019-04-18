@@ -26,4 +26,4 @@ sudo update-alternatives --install /usr/bin/clang++ clang++ /usr/bin/clang++-7 1
 sudo update-alternatives --install /usr/bin/clang clang /usr/bin/clang-7 100
 sudo update-alternatives --install /usr/bin/clangd clangd /usr/bin/clangd-7 100
 sudo update-alternatives --install /usr/bin/clang-tidy clang-tidy /usr/bin/clang-tidy-7 100
-sudo apt install --yes latexmk texlive-latex-recommended texlive-fonts-recommended texlive-latex-extra evince texlive-lang-german
+sudo apt install --yes latexmk texlive-latex-recommended texlive-fonts-recommended texlive-latex-extra evince texlive-lang-german texlive-science
