@@ -132,3 +132,4 @@ if [ $commands[kubectl] ]; then
 fi
 # configure hal auto-complete
 [ -f /etc/bash_completion.d/hal ] && . /etc/bash_completion.d/hal
+export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc
