@@ -19,6 +19,9 @@ nnoremap <silent> p p`]
 noremap <Leader>y "+y
 vnoremap <Leader>y "+y
 
+" Make mouse select work
+vnoremap <LeftRelease> "*ygv
+
 " Paste from system clipboard
 noremap <Leader>p "+p
 vnoremap <Leader>p "+p
