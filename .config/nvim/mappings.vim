@@ -122,7 +122,7 @@ nnoremap <silent> <Leader>aw :Denite -buffer-name=search grep:.:-w:<C-R><C-W><CR
 nnoremap <silent> <Leader>ar :Denite -buffer-name=search grep -resume<CR>
 nnoremap <silent> <Leader>f :Files<CR>
 nnoremap <silent> <Leader>b :Denite buffer<CR>
-nnoremap <silent> <Leader>gs :Denite gitstatus<CR>
+nnoremap <silent> <Leader>gs :Gstatus<CR>
 call denite#custom#map('normal', 'ga', '<denite:do_action:add>', 'noremap')
 call denite#custom#map('normal', 'gp', '<denite:do_action:patch>', 'noremap')
 call denite#custom#map('normal', 'gr', '<denite:do_action:reset>', 'noremap')
