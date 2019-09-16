@@ -45,4 +45,5 @@ Plug 'Yggdroot/indentLine'
 Plug 'carlitux/deoplete-ternjs'
 Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh' }
 Plug 'mhartington/nvim-typescript', { 'do': './install.sh' }
+Plug 'pangloss/vim-javascript'
 call plug#end()
