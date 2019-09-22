@@ -39,11 +39,13 @@ call denite#custom#option('_', 'direction', 'dynamicbottom')
 
 " deoplete
 let g:deoplete#enable_at_startup = 1
-let g:deoplete#auto_complete_delay = 200
-let g:deoplete#auto_refresh_delay = 200
 call deoplete#custom#source('ultisnips', 'rank', 9999)
 call deoplete#custom#source('ultisnips', 'matchers', ['matcher_fuzzy'])
 let g:echodoc#enable_at_startup = 1
+call deoplete#custom#option({
+            \ 'auto_complete_delay': 200,
+            \ 'auto_refresh_delay': 200,
+            \})
 
 let g:deoplete#sources#ternjs#types = 1
 let g:deoplete#sources#ternjs#docs = 1

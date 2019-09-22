@@ -17,7 +17,6 @@ Plug 'kana/vim-textobj-entire'
 Plug 'kana/vim-textobj-indent'
 Plug 'kana/vim-textobj-line'
 Plug 'kana/vim-textobj-user'
-Plug 'leafgarland/typescript-vim'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'PeterRincker/vim-argumentative'
 Plug 'Quramy/vim-js-pretty-template'
@@ -44,6 +43,8 @@ Plug 'xolox/vim-misc'
 Plug 'Yggdroot/indentLine'
 Plug 'carlitux/deoplete-ternjs'
 Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh' }
-Plug 'mhartington/nvim-typescript', { 'do': './install.sh' }
 Plug 'pangloss/vim-javascript'
+Plug 'mhartington/nvim-typescript', { 'do': './install.sh' }
+Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
 call plug#end()
