@@ -30,13 +30,13 @@ antigen bundle lukechilds/zsh-nvm
 antigen bundle robbyrussell/oh-my-zsh plugins/dirhistory
 antigen bundle robbyrussell/oh-my-zsh plugins/history-substring-search
 antigen bundle zsh-users/zsh-syntax-highlighting
-antigen theme https://github.com/denysdovhan/spaceship-zsh-theme spaceship
+antigen theme https://github.com/denysdovhan/spaceship-prompt
 antigen apply
 
 SPACESHIP_PROMPT_SYMBOL='❯'
 SPACESHIP_GIT_STATUS_SHOW=false
 SPACESHIP_EXIT_CODE_SHOW=true
-SPACESHIP_EXIT_CODE_SYMBOl=""
+SPACESHIP_EXIT_CODE_SYMBOL=""
 SPACESHIP_EXEC_TIME_ELAPSED=10
 SPACESHIP_DIR_COLOR=36
 SPACESHIP_PROMPT_ORDER=(
