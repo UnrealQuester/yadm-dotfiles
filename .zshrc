@@ -66,7 +66,7 @@ setopt dotglob
 
 
 autoload -U promptinit
-export PATH="`ruby -e 'print Gem.user_dir'`/bin:/sbin:/usr/sbin:$HOME/.local/bin:$PATH:$HOME/.cargo/bin"
+export PATH="`ruby -e 'print Gem.user_dir'`/bin:/sbin:/usr/sbin:$HOME/.local/bin:$PATH:$HOME/.cargo/bin:$(go env GOPATH)/bin"
 
 promptinit
 
